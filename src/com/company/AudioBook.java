@@ -1,37 +1,39 @@
 package com.company;
 
-public class AudioBook implements BookType{
-    private String fragment;
-    private String duration;
-    private String audio;
+import java.time.LocalTime;
 
-    public AudioBook(String fragment, String duration, String audio) {
+public class AudioBook implements BookType{
+    private FileInfo fragment;
+    private LocalTime duration;
+    private FileInfo audio;
+
+    public AudioBook(FileInfo fragment, LocalTime duration, FileInfo audio) {
         this.fragment = fragment;
         this.duration = duration;
         this.audio = audio;
     }
 
-    public String getFragment() {
+    public FileInfo getFragment() {
         return fragment;
     }
 
-    public void setFragment(String fragment) {
+    public void setFragment(FileInfo fragment) {
         this.fragment = fragment;
     }
 
-    public String getDuration() {
+    public LocalTime getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(LocalTime duration) {
         this.duration = duration;
     }
 
-    public String getAudio() {
+    public FileInfo getAudio() {
         return audio;
     }
 
-    public void setAudio(String audio) {
+    public void setAudio(FileInfo audio) {
         this.audio = audio;
     }
 

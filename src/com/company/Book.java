@@ -1,31 +1,33 @@
 package com.company;
 
+import java.util.Set;
+
 public class Book <T extends BookType> {
-    private T book;
-    private String images;
+    private Set<FileInfo> images;
     private String bookName;
     private String bookAuthor;
     private int price;
     private int likes;
+    private T book;
 
-    public Book(T book, String images, String bookName, String bookAuthor, int price, int likes) {
+    public Book(T book, Set<FileInfo> images, String bookName, String bookAuthor, int price) {
         this.book = book;
         this.images = images;
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.price = price;
-        this.likes = likes;
+        this.likes = 0;
     }
 
     public Book() {
 
     }
 
-    public String getImages() {
+    public Set<FileInfo> getImages() {
         return images;
     }
 
-    public void setImages(String images) {
+    public void setImages(Set<FileInfo> images) {
         this.images = images;
     }
 
@@ -78,13 +80,6 @@ public class Book <T extends BookType> {
     }
     @Override
     public String toString() {
-        return "Book{" +
-                "book=" + book +
-                "  images = " + images +
-                "  bookName = " + bookName +
-                "  bookAuthor = " + bookAuthor +
-                "  price = " + price +
-                "  likes = " + likes +
-                ' ';
+        return "book : " + bookName;
     }
 }

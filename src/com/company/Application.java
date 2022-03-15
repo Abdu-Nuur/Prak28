@@ -4,7 +4,7 @@ import com.company.exceptions.AlreadyLikedException;
 
 public class Application {
 
-    public static void like(Client client, Book<?> book) {
+    public void like(Client client, Book<?> book) {
         try {
             if (client.getLikedBooks().contains(book)) {
                 throw new AlreadyLikedException();
@@ -19,12 +19,12 @@ public class Application {
         }
     }
 
-    public static void dislike(Client client, Book<?> book) {
+    public void dislike(Client client, Book<?> book) {
         client.dislikedBook(book);
         book.dislike();
     }
 
-    public static void buyABook(Client client,
+    public void buyABook(Client client,
                                 Book<?> book) {
         client.buyABook(book);
     }

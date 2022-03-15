@@ -3,12 +3,12 @@ package com.company;
 public class FileInfo {
     private String fileName;
     private String fileSize;
-    private String fileType;
+    private FileType fileType;
 
     public FileInfo(){
 
     }
-    public FileInfo(String fileName, String fileSize, String fileType) {
+    public FileInfo(String fileName, String fileSize, FileType fileType) {
         this.fileName = fileName;
         this.fileSize = fileSize;
         this.fileType = fileType;
@@ -30,11 +30,11 @@ public class FileInfo {
         this.fileSize = fileSize;
     }
 
-    public String getFileType() {
+    public FileType getFileType() {
         return fileType;
     }
 
-    public void setFileType(String fileType) {
+    public void setFileType(FileType fileType) {
         this.fileType = fileType;
     }
 

@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -10,13 +11,11 @@ public class Client {
     private Set<Book<?>> satypAlyngynganKitepteri;
 
     public Client(String clientName,
-                  String clientEmail,
-                  Set<Book<?>> likedBooks,
-                  Set<Book<?>> satypAlyngynganKitepteri) {
+                  String clientEmail) {
         this.clientName = clientName;
         this.clientEmail = clientEmail;
-        this.likedBooks = likedBooks;
-        this.satypAlyngynganKitepteri = satypAlyngynganKitepteri;
+        this.likedBooks = new HashSet<>();
+        this.satypAlyngynganKitepteri = new HashSet<>();
     }
 
     public String getClientName() {

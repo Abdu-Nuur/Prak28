@@ -4,13 +4,13 @@ public class ElectronicBook implements BookType{
     private String fragment;
     private int pageSize;
     private String publishingHouse;
-    private String ElectronicBookbook;
+    private FileInfo electronicBook;
 
-    public ElectronicBook(String fragment, int pageSize, String publishingHouse, String electronicBookbook) {
+    public ElectronicBook(String fragment, int pageSize, String publishingHouse, FileInfo electronicBook) {
         this.fragment = fragment;
         this.pageSize = pageSize;
         this.publishingHouse = publishingHouse;
-        ElectronicBookbook = electronicBookbook;
+        this.electronicBook = electronicBook;
     }
 
     public String getFragment() {
@@ -37,12 +37,12 @@ public class ElectronicBook implements BookType{
         this.publishingHouse = publishingHouse;
     }
 
-    public String getElectronicBookbook() {
-        return ElectronicBookbook;
+    public FileInfo getElectronicBook() {
+        return electronicBook;
     }
 
-    public void setElectronicBookbook(String electronicBookbook) {
-        ElectronicBookbook = electronicBookbook;
+    public void setElectronicBook(FileInfo electronicBook) {
+        this.electronicBook = electronicBook;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class ElectronicBook implements BookType{
                 "fragment = " + fragment +
                 "  pageSize = " + pageSize +
                 "  publishingHouse = " + publishingHouse +
-                "  ElectronicBookbook = " + ElectronicBookbook +
+                "  ElectronicBookbook = " + electronicBook +
                 ' ';
     }
 }

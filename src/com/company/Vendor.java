@@ -1,12 +1,18 @@
 package com.company;
 
+import java.util.List;
+import java.util.Set;
+
 public class Vendor {
     private String vendorName;
     private String vendorEmail;
     private String phoneNumber;
-    private String booksToSale;
+    private List<Book<?>> booksToSale;
 
-    public Vendor(String vendorName, String vendorEmail, String phoneNumber, String booksToSale) {
+    public Vendor(String vendorName,
+                  String vendorEmail,
+                  String phoneNumber,
+                  List<Book<?>> booksToSale) {
         this.vendorName = vendorName;
         this.vendorEmail = vendorEmail;
         this.phoneNumber = phoneNumber;
@@ -37,11 +43,11 @@ public class Vendor {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getBooksToSale() {
+    public List<Book<?>> getBooksToSale() {
         return booksToSale;
     }
 
-    public void setBooksToSale(String booksToSale) {
+    public void setBooksToSale(List<Book<?>> booksToSale) {
         this.booksToSale = booksToSale;
     }
 
