@@ -69,6 +69,13 @@ public class Book <T extends BookType> {
         this.book = book;
     }
 
+    public void like() {
+        this.likes++;
+    }
+
+    public void dislike() {
+        this.likes--;
+    }
     @Override
     public String toString() {
         return "Book{" +

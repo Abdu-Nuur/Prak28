@@ -1,12 +1,18 @@
 package com.company;
 
+import java.util.List;
+import java.util.Set;
+
 public class Client {
     private String clientName;
     private String clientEmail;
-    private String likedBooks;
-    private String satypAlyngynganKitepteri;
+    private Set<Book<?>> likedBooks;
+    private Set<Book<?>> satypAlyngynganKitepteri;
 
-    public Client(String clientName, String clientEmail, String likedBooks, String satypAlyngynganKitepteri) {
+    public Client(String clientName,
+                  String clientEmail,
+                  Set<Book<?>> likedBooks,
+                  Set<Book<?>> satypAlyngynganKitepteri) {
         this.clientName = clientName;
         this.clientEmail = clientEmail;
         this.likedBooks = likedBooks;
@@ -29,22 +35,33 @@ public class Client {
         this.clientEmail = clientEmail;
     }
 
-    public String getLikedBooks() {
+    public Set<Book<?>> getLikedBooks() {
         return likedBooks;
     }
 
-    public void setLikedBooks(String likedBooks) {
+    public void setLikedBooks(Set<Book<?>> likedBooks) {
         this.likedBooks = likedBooks;
     }
 
-    public String getSatypAlyngynganKitepteri() {
+    public Set<Book<?>> getSatypAlyngynganKitepteri() {
         return satypAlyngynganKitepteri;
     }
 
-    public void setSatypAlyngynganKitepteri(String satypAlyngynganKitepteri) {
+    public void setSatypAlyngynganKitepteri(Set<Book<?>> satypAlyngynganKitepteri) {
         this.satypAlyngynganKitepteri = satypAlyngynganKitepteri;
     }
 
+    public void likedABook(Book<?> book) {
+        this.likedBooks.add(book);
+    }
+
+    public void dislikedBook(Book<?> book) {
+        this.likedBooks.remove(book);
+    }
+
+    public void buyABook(Book<?> book) {
+        this.satypAlyngynganKitepteri.add(book);
+    }
     @Override
     public String toString() {
         return "Client " +
@@ -54,4 +71,5 @@ public class Client {
                 "  satypAlyngynganKitepteri = " + satypAlyngynganKitepteri +
                 ' ';
     }
+
 }
